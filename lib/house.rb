@@ -17,6 +17,6 @@ class House
   end
 
   def rooms_from_category(room_type)
-    return @rooms.select {|room| room == room_type}
+    @rooms.find_all { |room| room.category == room_type} 
   end
 end
