@@ -13,10 +13,6 @@ class House
   end
 
   def above_market_value?
-    if @price.to_i > 400000
-      true
-    else
-      false
-    end
+    @price.gsub(/\D/, '').to_i > 500_000
   end
 end
