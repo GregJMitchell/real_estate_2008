@@ -12,7 +12,7 @@ class House
     @rooms << room
   end
 
-  def above_market_value?
+  def above_market_average?
     @price.gsub(/\D/, '').to_i > 500_000
   end
 
