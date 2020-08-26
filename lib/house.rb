@@ -15,4 +15,8 @@ class House
   def above_market_value?
     @price.gsub(/\D/, '').to_i > 500_000
   end
+
+  def rooms_from_category(room_type)
+    return @rooms.select {|room| room == room_type}
+  end
 end
